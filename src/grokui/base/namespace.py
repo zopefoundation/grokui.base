@@ -4,10 +4,12 @@
 import grok
 from zope.site.interfaces import IRootFolder
 from zope.location import LocationProxy
+from zope.component import queryUtility
 from zope.publisher.browser import applySkin
 from zope.publisher.interfaces import browser
+from zope.publisher.interfaces import NotFound
 from zope.traversing.interfaces import ITraversable
-from grokui.base.interfaces import IGrokUIRealm
+from grokui.base.interfaces import IGrokUIRealm, IGrokUIPluginInfo
 
 
 class GrokUILayer(grok.IDefaultBrowserLayer):
@@ -35,3 +37,19 @@ class GrokUINamespace(grok.MultiAdapter):
 
     def traverse(self, name, ignore):
         return LocationProxy(self, self.root, "++grokui++")
+
+
+class GrokUIPluginInfo(grok.MultiAdapter):
+    grok.name('info')
+    grok.provides(ITraversable)
+    grok.adapts(IGrokUIRealm, browser.IBrowserRequest)
+
+    def __init__(self, context, request):
+        self.root = context
+        self.request = request
+
+    def traverse(self, name, ignore):
+        info = queryUtility(IGrokUIPluginInfo, name=name)
+        if info is None:
+            raise NotFound(self.context, name, self.request)
+        return LocationProxy(info, self.context, "++info++%s" % name)
