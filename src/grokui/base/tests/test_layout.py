@@ -4,7 +4,7 @@ Building panels using `GrokUIView`
 
 We create a browser to watch our views:
 
-    >>> from zope.app.wsgi.testlayer import Browser
+    >>> from zope.testbrowser.wsgi import Browser
     >>> browser = Browser()
     >>> browser.addHeader('Authorization', 'Basic mgr:mgrpw')
     >>> browser.handleErrors = False
@@ -20,7 +20,7 @@ When we render PlainAdminView, we will get a complete Grok UI page
 with the contents delivered by the `render()` method inserted:
 
     >>> browser.open('http://localhost/++grokui++/caveview')
-    >>> print browser.contents
+    >>> print(browser.contents)
     <html xmlns="http://www.w3.org/1999/xhtml">
     ...
      <title>Grok User Interface</title>
@@ -34,7 +34,7 @@ with the contents delivered by the `render()` method inserted:
 We also provided a ``title`` with our page. Therefore we will get an
 entry in the navigation bar:
 
-    >>> print browser.contents
+    >>> print(browser.contents)
     <html xmlns="http://www.w3.org/1999/xhtml">
     ...
     <ul id="grokui-menu-entries">
