@@ -56,14 +56,14 @@ We grok this view to register it with the component architechture:
 
 Let's create a browser to lookup this view:
 
-    >>> from zope.app.wsgi.testlayer import Browser
+    >>> from zope.testbrowser.wsgi import Browser
     >>> browser = Browser()
     >>> browser.addHeader('Authorization', 'Basic mgr:mgrpw')
 
 We can get this screen when we ask for the correct namespace:
 
     >>> browser.open('http://localhost/++grokui++/@@helloadmin')
-    >>> print browser.contents
+    >>> print(browser.contents)
     Hello admin!
 
 If we ask for this view without the namespace set correctly, the view
@@ -72,7 +72,7 @@ will not be found:
     >>> browser.open('http://localhost/@@helloadmin')
     Traceback (most recent call last):
     ...
-    HTTPError: HTTP Error 404: Not Found
+    urllib.error.HTTPError: HTTP Error 404: Not Found
 
 
 GrokUI Pages
@@ -121,7 +121,7 @@ We can access the page in GrokUI namespace ``++grokui++`` under the
 name given above (``managecave``):
 
     >>> browser.open('http://localhost/++grokui++/managecave')
-    >>> print browser.contents
+    >>> print(browser.contents)
     <html xmlns="http://www.w3.org/1999/xhtml">
     ...<head>
     ...<title>Grok User Interface</title>
