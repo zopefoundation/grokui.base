@@ -21,7 +21,7 @@ fail-under = 98
 additional-config = [
     "# F401 imported but unused",
     "per-file-ignores =",
-    "    src/grokui/base/__init__.py: F40",
+    "    src/grokui/base/__init__.py: F401",
     ]
 
 [manifest]
