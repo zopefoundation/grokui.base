@@ -18,32 +18,43 @@ tests_require = [
     'zope.principalregistry',
     'zope.security',
     'zope.securitypolicy',
-    ]
+]
+
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
 
 setup(name='grokui.base',
       version='0.9.dev0',
       description="The Grok administration and development UI (base)",
       long_description=(
-        read('README.txt') +
-        '\n\n' +
-        read(os.path.join('src', 'grokui', 'base', 'README.txt')) +
-        '\n\n' +
-        read('CHANGES.txt')
-        ),
+          read('README.txt') +
+          '\n\n' +
+          read(os.path.join('src', 'grokui', 'base', 'README.txt')) +
+          '\n\n' +
+          read('CHANGES.txt')
+      ),
       # Get strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Environment :: Web Environment',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: Zope Public License',
-        'Programming Language :: Python',
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
-        'Topic :: Internet :: WWW/HTTP',
-        'Framework :: Zope :: 3'],
+          'Development Status :: 3 - Alpha',
+          'Environment :: Web Environment',
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: Zope Public License',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 2',
+          'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: Implementation :: CPython',
+          'Natural Language :: English',
+          'Operating System :: OS Independent',
+          'Topic :: Internet :: WWW/HTTP',
+          'Framework :: Zope :: 3'],
       keywords="zope3 grok grokadmin",
       author="Zope Foundation and Contributors",
       author_email="grok-dev@zope.org",
@@ -53,7 +64,7 @@ setup(name='grokui.base',
       packages=find_packages('src'),
       include_package_data=True,
       zip_safe=False,
-      namespace_packages = ['grokui'],
+      namespace_packages=['grokui'],
       install_requires=[
           'fanstatic',
           'grok >= 1.10',
@@ -74,9 +85,9 @@ setup(name='grokui.base',
           'zope.security',
           'zope.site',
           'zope.traversing',
-          ],
-      tests_require = tests_require,
-      extras_require = dict(test=tests_require),
+      ],
+      tests_require=tests_require,
+      extras_require=dict(test=tests_require),
       entry_points={
           'fanstatic.libraries': [
               'grokui.base = grokui.base.resource:library']}
