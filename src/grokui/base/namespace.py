@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Components to keep Grok UI related stuff in a dedicated namespace.
 """
 from zope.site.interfaces import IRootFolder

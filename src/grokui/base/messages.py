@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import grok
 from grokcore.message import UniqueMessageSource
 
