@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from zope.browsermenu.interfaces import IBrowserMenu
 from zope.authentication.interfaces import IUnauthenticatedPrincipal
 from zope.component import getUtility

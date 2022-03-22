@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from zope.site.interfaces import IRootFolder
 from zope.component import getUtility, getMultiAdapter
 from zope.browsermenu.interfaces import IBrowserMenu
@@ -46,7 +44,7 @@ class Index(grok.View):
         items = menu.getMenuItems(realm, self.request)
         if len(items) == 0:
             # No grokui panel installed.
-            return u'No further grokui components are installed.'
+            return 'No further grokui components are installed.'
         first_name = items[0]['action']
         grokui_url = self.url(self.context) + '/++grokui++/@@' + first_name
         self.redirect(grokui_url)

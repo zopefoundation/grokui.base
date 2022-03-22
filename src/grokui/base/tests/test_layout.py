@@ -65,7 +65,7 @@ class CaveAdminView(GrokUIView):
     def render(self):
         """This will go into a standard Grok UI page.
         """
-        return u'Hello from CaveAdminView'
+        return 'Hello from CaveAdminView'
 
 
 def test_suite():

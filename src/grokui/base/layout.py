@@ -11,7 +11,7 @@ class GrokUILayout(grok.Layout):
     """The general layout for the administration
     """
     grok.context(IGrokUIRealm)
-    title = u"Grok User Interface"
+    title = "Grok User Interface"
 
     def update(self):
         resource.grok_css.need()
