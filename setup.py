@@ -26,7 +26,7 @@ def read(*rnames):
 
 
 setup(name='grokui.base',
-      version='0.9.dev0',
+      version='1.0.dev0',
       description="The Grok administration and development UI (base)",
       long_description=(
           read('README.txt') +
