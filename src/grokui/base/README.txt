@@ -69,10 +69,10 @@ We can get this screen when we ask for the correct namespace:
 If we ask for this view without the namespace set correctly, the view
 will not be found:
 
+    >>> browser.raiseHttpErrors = False
     >>> browser.open('http://localhost/@@helloadmin')
-    Traceback (most recent call last):
-    ...
-    urllib.error.HTTPError: HTTP Error 404: Not Found
+    >>> print(browser.headers['status'])
+    404 Not Found
 
 
 GrokUI Pages

@@ -1,9 +1,13 @@
-from zope.site.interfaces import IRootFolder
-from zope.component import getUtility, getMultiAdapter
-from zope.browsermenu.interfaces import IBrowserMenu
 import grok
 from megrok.menu import Menu
-from grokui.base import IGrokUIRealm, GrokUILayer
+from zope.browsermenu.interfaces import IBrowserMenu
+from zope.component import getMultiAdapter
+from zope.component import getUtility
+from zope.site.interfaces import IRootFolder
+
+from grokui.base import GrokUILayer
+from grokui.base import IGrokUIRealm
+
 
 grok.layer(GrokUILayer)
 grok.context(IGrokUIRealm)

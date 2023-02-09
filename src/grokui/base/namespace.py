@@ -1,11 +1,12 @@
 """Components to keep Grok UI related stuff in a dedicated namespace.
 """
-from zope.site.interfaces import IRootFolder
+import grok
 from zope.location import LocationProxy
 from zope.publisher.browser import applySkin
 from zope.publisher.interfaces import browser
+from zope.site.interfaces import IRootFolder
 from zope.traversing.interfaces import ITraversable
-import grok
+
 from grokui.base.interfaces import IGrokUIRealm
 
 

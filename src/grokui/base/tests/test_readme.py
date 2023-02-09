@@ -1,7 +1,9 @@
-import unittest
 import doctest
-import grokui.base
+import unittest
+
 from zope.fanstatic.testing import ZopeFanstaticBrowserLayer
+
+import grokui.base
 
 
 def test_suite():

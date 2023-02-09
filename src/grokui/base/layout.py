@@ -1,8 +1,13 @@
-from zope.traversing.browser.absoluteurl import absoluteURL
 import grok
-from grokui.base import IGrokUIRealm, GrokUILayer, IUIPanel, MainMenu
-from grokui.base import resource
 import megrok.menu
+from zope.traversing.browser.absoluteurl import absoluteURL
+
+from grokui.base import GrokUILayer
+from grokui.base import IGrokUIRealm
+from grokui.base import IUIPanel
+from grokui.base import MainMenu
+from grokui.base import resource
+
 
 grok.layer(GrokUILayer)
 
