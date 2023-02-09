@@ -47,12 +47,14 @@ entry in the navigation bar:
     </html>
 
 """
-import grokui.base
-import unittest
 import doctest
+import unittest
+
 import grok
-from grokui.base import GrokUIView
 from zope.fanstatic.testing import ZopeFanstaticBrowserLayer
+
+import grokui.base
+from grokui.base import GrokUIView
 
 
 class CaveAdminView(GrokUIView):

@@ -1,5 +1,8 @@
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages
+from setuptools import setup
+
 
 tests_require = [
     'martian',
@@ -42,16 +45,17 @@ setup(name='grokui.base',
           'License :: OSI Approved :: Zope Public License',
           'Programming Language :: Python',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
           'Programming Language :: Python :: 3.9',
           'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
           'Programming Language :: Python :: Implementation :: CPython',
           'Natural Language :: English',
           'Operating System :: OS Independent',
           'Topic :: Internet :: WWW/HTTP',
-          'Framework :: Zope :: 3'],
+          'Framework :: Zope :: 3',
+      ],
       keywords="zope3 grok grokadmin",
       author="Zope Foundation and Contributors",
       author_email="grok-dev@zope.org",
@@ -62,7 +66,7 @@ setup(name='grokui.base',
       include_package_data=True,
       zip_safe=False,
       namespace_packages=['grokui'],
-      python_requires='>=3.6, <4',
+      python_requires='>=3.7',
       install_requires=[
           'fanstatic',
           'grok >= 1.10',

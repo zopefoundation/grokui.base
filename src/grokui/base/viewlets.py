@@ -1,9 +1,15 @@
-from zope.browsermenu.interfaces import IBrowserMenu
-from zope.authentication.interfaces import IUnauthenticatedPrincipal
-from zope.component import getUtility
 import grok
 from grokcore.message.utils import receive
-from grokui.base import Header, Footer, Messages, IUIPanel, IGrokUIRealm
+from zope.authentication.interfaces import IUnauthenticatedPrincipal
+from zope.browsermenu.interfaces import IBrowserMenu
+from zope.component import getUtility
+
+from grokui.base import Footer
+from grokui.base import Header
+from grokui.base import IGrokUIRealm
+from grokui.base import IUIPanel
+from grokui.base import Messages
+
 
 grok.view(IUIPanel)
 grok.context(IGrokUIRealm)

@@ -1,4 +1,6 @@
-from fanstatic import Library, Resource
+from fanstatic import Library
+from fanstatic import Resource
+
 
 library = Library('grokui.base', 'static')
 

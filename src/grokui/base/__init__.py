@@ -1,4 +1,11 @@
-from grokui.base.interfaces import IGrokUIRealm, IUIPanel, IMainMenu
-from grokui.base.namespace import GrokUILayer, GrokUISkin, GrokUINamespace
-from grokui.base.contentproviders import Header, Footer, MainMenu, Messages
+from grokui.base.contentproviders import Footer
+from grokui.base.contentproviders import Header
+from grokui.base.contentproviders import MainMenu
+from grokui.base.contentproviders import Messages
+from grokui.base.interfaces import IGrokUIRealm
+from grokui.base.interfaces import IMainMenu
+from grokui.base.interfaces import IUIPanel
 from grokui.base.layout import GrokUIView
+from grokui.base.namespace import GrokUILayer
+from grokui.base.namespace import GrokUINamespace
+from grokui.base.namespace import GrokUISkin
